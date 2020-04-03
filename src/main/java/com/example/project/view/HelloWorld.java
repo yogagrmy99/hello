@@ -7,15 +7,21 @@ import javax.inject.Named;
 @RequestScoped
 public class HelloWorld {
 
-	public HelloWorld() {
-		// TODO Auto-generated constructor stub
-		System.out.println("HelloWorld started!");
-	   }
-		
-	public String getMessage() {
-	      return "Hello World!";
+	private String input;
+	private String output;
+	public void submit() {
+		output = "Hello World! You have typed: " + input;
 	}
 	
+	public String getInput() {
+		return input;
+	}
 	
-
+	public void setInput(String input) {
+		this.input = input;
+	}
+	
+	public String getOutput() {
+		return output;
+	}
 }
